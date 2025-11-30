@@ -33,6 +33,7 @@ app.post("/api/submissions", (req: Request, res: Response) => {
   // Store submission
   const submission = storage.addSubmission(data);
 
+  // sending res
   res.status(201).json({
     success: true,
     id: submission.id,
